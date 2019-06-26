@@ -7,7 +7,7 @@ public class CreateFileRequest {
     public static void createFile(String repository, String fileName){
         RestAssured.given()
                 .log().all()
-                .baseUri("https://cloud-api.yandex.net:443")
+                .baseUri("https://cloud-api.yandex.net")
                 .basePath("/v1/disk/resources/copy")
                 .queryParam("from", fileName)
                 .queryParam("path", "/" + repository +"/" +fileName)

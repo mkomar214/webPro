@@ -8,7 +8,7 @@ public class BastetSizeRequest {
     public static int basketSizeRequest () {
         Integer basketSize = RestAssured.given()
                 .log().all()
-                .baseUri("https://cloud-api.yandex.net:443")
+                .baseUri("https://cloud-api.yandex.net")
                 .basePath("/v1/disk/")
                 .queryParam("fields", "trash_size")
                 .header("Authorization", "OAuth AQAAAAAzPuCGAADLWywjbAZlS0BLgdiuGx5RDF0")

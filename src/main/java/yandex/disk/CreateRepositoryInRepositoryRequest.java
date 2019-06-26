@@ -7,7 +7,7 @@ public class CreateRepositoryInRepositoryRequest {
     public static void createRepositoryInRepository(String repository_1, String repository_2) {
         RestAssured.given()
                 .log().all()
-                .baseUri("https://cloud-api.yandex.net:443")
+                .baseUri("https://cloud-api.yandex.net")
                 .basePath("/v1/disk/resources")
                 .param("path","/" + repository_1 + "/" + repository_2)
                 .header("Authorization","OAuth AQAAAAAzPuCGAADLWywjbAZlS0BLgdiuGx5RDF0")

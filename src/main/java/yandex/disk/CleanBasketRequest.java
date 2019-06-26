@@ -7,7 +7,7 @@ public class CleanBasketRequest {
     public static void BasketClean() {
         RestAssured.given()
                 .log().all()
-                .baseUri("https://cloud-api.yandex.net:443")
+                .baseUri("https://cloud-api.yandex.net")
                 .basePath("/v1/disk/trash/resources")
                 .header("Authorization", "OAuth AQAAAAAzPuCGAADLWywjbAZlS0BLgdiuGx5RDF0")
                 .contentType(ContentType.JSON)

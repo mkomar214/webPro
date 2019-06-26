@@ -7,7 +7,7 @@ public class FindResourseRequest {
 
         public static void findResourse(String repository, int statusCode) {
                     RestAssured.given().log().all()
-                    .baseUri("https://cloud-api.yandex.net:443")
+                    .baseUri("https://cloud-api.yandex.net")
                     .basePath("/v1/disk/resources")
                     .param("path", repository)
                     .header("Authorization", "OAuth AQAAAAAzPuCGAADLWywjbAZlS0BLgdiuGx5RDF0")

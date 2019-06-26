@@ -7,7 +7,7 @@ public class RestoreFileIFromBasketRequest {
     public static void restoreFileFromBusket(String fileName) {
         RestAssured.given()
                 .log().all()
-                .baseUri("https://cloud-api.yandex.net:443")
+                .baseUri("https://cloud-api.yandex.net")
                 .basePath("/v1/disk/trash/resources/restore")
                 .queryParam("path", fileName)
                 .header("Authorization","OAuth AQAAAAAzPuCGAADLWywjbAZlS0BLgdiuGx5RDF0")

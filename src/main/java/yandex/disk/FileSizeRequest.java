@@ -7,7 +7,7 @@ public class FileSizeRequest {
     public static int fileSizeRequest (String repository, String fileName) {
         Integer fileSize = RestAssured.given()
                 .log().all()
-                .baseUri("https://cloud-api.yandex.net:443")
+                .baseUri("https://cloud-api.yandex.net")
                 .basePath("/v1/disk/resources")
                 .queryParam("path", "/" + repository + "/" + fileName)
                 .queryParam("fields", "size")
